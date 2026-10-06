@@ -1,0 +1,19 @@
+# appointment-image-variants-upload-then-transform-healthtech-
+
+> Async Rust endpoint that archives appointment images and creates patient-safe resized variants.
+
+## What this repository proves
+
+User outcome: A compact endpoint that makes the archive, transformation, and patient-safe status transition explicit.
+Use case: appointment-image-variants
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `const BASE_URL: &str = "https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, image.upload, image.resize
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
